@@ -30,8 +30,9 @@ class WordAdapter(
             }
         }
 
-        fun bind(word: Word, isShowTranslate: Boolean, isShowWord: Boolean) {
+        fun bind(position: Int, word: Word, isShowTranslate: Boolean, isShowWord: Boolean) {
             with(binding) {
+                textViewNum.text = position.toString()
                 textViewTranslate.visibleOrGone(isShowTranslate)
                 textViewWord.visibleOrGone(isShowWord)
                 textViewWord.text = word.word
@@ -67,7 +68,7 @@ class WordAdapter(
     }
 
     override fun onBindViewHolder(holder: WordView, position: Int) {
-        holder.bind(wordList[position], isShowTranslate, isShowWord)
+        holder.bind(position, wordList[position], isShowTranslate, isShowWord)
     }
 
     override fun getItemCount(): Int {
