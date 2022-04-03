@@ -35,6 +35,8 @@ class FragmentAddWord : Fragment() {
                 if (translate.isEmpty() || word.isEmpty()) return@setOnClickListener
 
                 viewModel.addWord(Word(word, translate))
+                editTextTranslate.setText("")
+                editTextWord.setText("")
 
                 val context = root.context
                 Toast.makeText(
