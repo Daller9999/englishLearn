@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_navigation"
+    app:startDestination="@id/fragmentWords">
+
+    <fragment
+        android:id="@+id/fragmentAddWord"
+        android:name="com.sunplacestudio.englishlearn.fragments.addword.FragmentAddWord"
+        android:label="FragmentAddWord" />
+    <fragment
+        android:id="@+id/fragmentEtc"
+        android:name="com.sunplacestudio.englishlearn.fragments.etc.FragmentEtc"
+        android:label="FragmentEtc" />
+    <fragment
+        android:id="@+id/fragmentLearn"
+        android:name="com.sunplacestudio.englishlearn.fragments.learn.FragmentLearn"
+        android:label="FragmentLearn" />
+    <fragment
+        android:id="@+id/fragmentSearchWord"
+        android:name="com.sunplacestudio.englishlearn.fragments.searchword.FragmentSearchWord"
+        android:label="FragmentSearchWord" >
+        <action
+            android:id="@+id/action_fragmentSearchWord_to_fragmentEditWord"
+            app:destination="@id/fragmentEditWord" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentWords"
+        android:name="com.sunplacestudio.englishlearn.fragments.words.FragmentWords"
+        android:label="FragmentWords" >
+        <action
+            android:id="@+id/action_fragmentWords_to_fragmentEditWord"
+            app:destination="@id/fragmentEditWord" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentEditWord"
+        android:name="com.sunplacestudio.englishlearn.fragments.editword.FragmentEditWord"
+        android:label="FragmentEditWord" />
+</navigation>

@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">EnglishLearn</string>
+    <string name="text_words">Words</string>
+    <string name="text_add_word">Add Word</string>
+    <string name="text_search_word">Search Word</string>
+    <string name="text_etc">Etc</string>
+    <string name="text_learn">Learn</string>
+
+    <string name="text_word">Word</string>
+    <string name="text_translate">Translate</string>
+    <string name="text_add_word_tittle">Add word</string>
+    <string name="text_edit_word_tittle">Edit word</string>
+    <string name="text_enter_word">Enter word</string>
+    <string name="text_enter_translate">Enter translate</string>
+    <string name="text_added">Word Added</string>
+    <string name="text_save_changes">Save changed</string>
+    <string name="text_next">Next</string>
+    <string name="text_show">Show</string>
+    <string name="text_word_updated">Word updated</string>
+</resources>

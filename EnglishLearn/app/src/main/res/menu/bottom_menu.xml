@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/main_page"
+        android:icon="@drawable/baseline_list_24"
+        android:title="@string/text_words" />
+
+    <item
+        android:id="@+id/add_word"
+        android:icon="@drawable/baseline_add_24"
+        android:title="@string/text_add_word" />
+
+    <item
+        android:id="@+id/search_word"
+        android:icon="@drawable/baseline_search_24"
+        android:title="@string/text_search_word" />
+
+    <item
+        android:id="@+id/learn"
+        android:icon="@drawable/baseline_import_contacts_24"
+        android:title="@string/text_learn" />
+
+    <item
+        android:id="@+id/etc"
+        android:icon="@drawable/baseline_more_horiz_24"
+        android:title="@string/text_etc" />
+
+</menu>
