@@ -29,6 +29,8 @@ class FragmentAddWord : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         with(binding) {
+            editTextWord.requestFocus()
+
             buttonAdd.setOnClickListener {
                 val translate = editTextTranslate.text.toString()
                 val word = editTextWord.text.toString()
@@ -38,12 +40,7 @@ class FragmentAddWord : Fragment() {
                 editTextTranslate.setText("")
                 editTextWord.setText("")
 
-                val context = root.context
-                Toast.makeText(
-                    context,
-                    context.getString(R.string.text_added),
-                    Toast.LENGTH_SHORT
-                ).show()
+                editTextWord.requestFocus()
             }
         }
     }
