@@ -32,7 +32,7 @@ class WordAdapter(
 
         fun bind(position: Int, word: Word, isShowTranslate: Boolean, isShowWord: Boolean) {
             with(binding) {
-                textViewNum.text = position.toString()
+                textViewNum.text = (position + 1).toString()
                 textViewTranslate.visibleOrGone(isShowTranslate)
                 textViewWord.visibleOrGone(isShowWord)
                 textViewWord.text = word.word

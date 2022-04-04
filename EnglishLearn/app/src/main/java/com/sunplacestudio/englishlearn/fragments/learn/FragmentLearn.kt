@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.sunplacestudio.englishlearn.databinding.FragmentLearnBinding
 import com.sunplacestudio.englishlearn.visibleOrGone
+import com.sunplacestudio.englishlearn.visibleOrInvisible
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class FragmentLearn : Fragment() {
@@ -29,16 +30,16 @@ class FragmentLearn : Fragment() {
         with(binding) {
             buttonNext.setOnClickListener { viewModel.next() }
             buttonShowAll.setOnClickListener {
-                editTextWord.visibleOrGone(true)
-                editTextTranslate.visibleOrGone(true)
+                editTextWord.visibleOrInvisible(true)
+                editTextTranslate.visibleOrInvisible(true)
             }
         }
         viewModel.word.observe(viewLifecycleOwner) { state ->
             with(binding) {
                 editTextWord.text = state.word.word
                 editTextTranslate.text = state.word.translate
-                editTextTranslate.visibleOrGone(state.isShowTranslate)
-                editTextWord.visibleOrGone(state.isShowWord)
+                editTextTranslate.visibleOrInvisible(state.isShowTranslate)
+                editTextWord.visibleOrInvisible(state.isShowWord)
             }
         }
     }

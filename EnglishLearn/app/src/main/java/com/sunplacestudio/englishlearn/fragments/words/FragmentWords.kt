@@ -52,7 +52,17 @@ class FragmentWords : Fragment() {
         with(binding) {
             wordRecycler.layoutManager = LinearLayoutManager(root.context)
             wordRecycler.adapter = wordAdapter
-            checkBoxTranslate.setOnClickListener { viewModel.update() }
+            textViewTranslate.setOnClickListener {
+                checkBoxTranslate.isChecked = !checkBoxTranslate.isChecked
+                viewModel.update()
+            }
+            textViewWord.setOnClickListener {
+                checkBoxWord.isChecked = !checkBoxWord.isChecked
+                viewModel.update()
+            }
+            checkBoxTranslate.setOnClickListener {
+                viewModel.update()
+            }
             checkBoxWord.setOnClickListener { viewModel.update() }
         }
 
