@@ -1,20 +1,29 @@
 package com.sunplacestudio.englishlearn.fragments.learn
 
 import android.os.Bundle
+import android.speech.tts.TextToSpeech
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.sunplacestudio.englishlearn.databinding.FragmentLearnBinding
-import com.sunplacestudio.englishlearn.visibleOrGone
 import com.sunplacestudio.englishlearn.visibleOrInvisible
 import org.koin.androidx.viewmodel.ext.android.viewModel
+import java.util.*
 
 class FragmentLearn : Fragment() {
 
     private val viewModel by viewModel<LearnViewModel>()
 
     private lateinit var binding: FragmentLearnBinding
+
+    private val textToSpeechEngine: TextToSpeech by lazy {
+        TextToSpeech(requireContext()) { status ->
+            if (status == TextToSpeech.SUCCESS) {
+                textToSpeechEngine.language = Locale.US
+            }
+        }
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -33,6 +42,10 @@ class FragmentLearn : Fragment() {
                 editTextWord.visibleOrInvisible(true)
                 editTextTranslate.visibleOrInvisible(true)
             }
+            buttonListen.setOnClickListener {
+                val word = viewModel.word.value?.word?.word ?: return@setOnClickListener
+                textToSpeechEngine.speak(word, TextToSpeech.QUEUE_FLUSH, null, "null")
+            }
         }
         viewModel.word.observe(viewLifecycleOwner) { state ->
             with(binding) {
@@ -43,4 +56,5 @@ class FragmentLearn : Fragment() {
             }
         }
     }
+
 }

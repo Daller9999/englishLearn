@@ -79,6 +79,14 @@
         tools:text="transalte"/>
 
     <Button
+        android:id="@+id/buttonListen"
+        android:layout_width="match_parent"
+        android:text="@string/text_listen"
+        android:layout_height="50dp"
+
+        app:layout_constraintBottom_toTopOf="@id/buttonShowAll"/>
+
+    <Button
         android:id="@+id/buttonShowAll"
         android:layout_width="match_parent"
         android:text="@string/text_show"

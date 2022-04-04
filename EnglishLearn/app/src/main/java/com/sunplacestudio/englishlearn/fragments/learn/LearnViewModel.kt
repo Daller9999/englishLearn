@@ -24,7 +24,6 @@ class LearnViewModel(
     val word: LiveData<WordState> = _word
 
     private val list = arrayListOf<Word>()
-    private var job: Job? = null
 
     init {
         scopeIO.launch {
