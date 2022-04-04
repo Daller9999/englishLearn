@@ -48,6 +48,7 @@ class FragmentSearchWord : Fragment() {
         }
 
         with(binding) {
+            editTextWord.requestFocus()
             wordRecycler.layoutManager = LinearLayoutManager(root.context)
             wordRecycler.adapter = wordAdapter
             editTextWord.addTextChangedListener {

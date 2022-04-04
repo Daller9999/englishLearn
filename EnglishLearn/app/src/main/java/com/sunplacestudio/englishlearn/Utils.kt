@@ -9,3 +9,5 @@ fun View.visibleOrGone(isVisible: Boolean) {
 fun View.visibleOrInvisible(isVisible: Boolean) {
     visibility = if (isVisible) View.VISIBLE else View.INVISIBLE
 }
+
+const val LOG_TAG = "ENGLISH_LEARN"

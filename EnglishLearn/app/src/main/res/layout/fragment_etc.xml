@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_margin="10dp">
+
+    <TextView
+        android:id="@+id/textViewWordsCount"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        android:gravity="center"
+
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="words count is 100"/>
+
+    <Button
+        android:id="@+id/buttonPrintToConsole"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="@string/text_print_to_console"
+
+        app:layout_constraintTop_toBottomOf="@id/textViewWordsCount" />
+
+    <Button
+        android:id="@+id/buttonExportDB"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="@string/text_close_db"
+
+        app:layout_constraintTop_toBottomOf="@id/buttonPrintToConsole" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

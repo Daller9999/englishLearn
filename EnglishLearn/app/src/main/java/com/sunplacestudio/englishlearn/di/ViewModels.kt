@@ -13,7 +13,7 @@ import org.koin.dsl.module
 
 val modelsFactory = module {
     factory { AddWordViewModel(get(), get()) }
-    factory { EtcViewModel(get(), get()) }
+    factory { EtcViewModel(get(), get(), get()) }
     factory { LearnViewModel(get(), get()) }
     factory { SearchViewModel(get(), get()) }
     factory { WordsViewModel(get(), get()) }
