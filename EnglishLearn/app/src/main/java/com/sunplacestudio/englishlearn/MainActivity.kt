@@ -28,7 +28,7 @@ class MainActivity : AppCompatActivity() {
                 R.id.learn -> navController.navigate(R.id.fragmentLearn)
                 R.id.add_word -> navController.navigate(R.id.fragmentAddWord)
                 R.id.search_word -> navController.navigate(R.id.fragmentSearchWord)
-                R.id.etc -> navController.navigate(R.id.fragmentEtc)
+//                R.id.etc -> navController.navigate(R.id.fragmentEtc)
             }
         }
         true
@@ -40,7 +40,7 @@ class MainActivity : AppCompatActivity() {
             R.id.learn -> R.id.fragmentLearn
             R.id.add_word -> R.id.fragmentAddWord
             R.id.search_word -> R.id.fragmentSearchWord
-            R.id.etc -> R.id.fragmentEtc
+//            R.id.etc -> R.id.fragmentEtc
             else -> null
         }
     }

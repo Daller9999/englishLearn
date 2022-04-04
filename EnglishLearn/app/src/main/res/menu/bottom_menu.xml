@@ -21,9 +21,9 @@
         android:icon="@drawable/baseline_import_contacts_24"
         android:title="@string/text_learn" />
 
-    <item
-        android:id="@+id/etc"
-        android:icon="@drawable/baseline_more_horiz_24"
-        android:title="@string/text_etc" />
+<!--    <item-->
+<!--        android:id="@+id/etc"-->
+<!--        android:icon="@drawable/baseline_more_horiz_24"-->
+<!--        android:title="@string/text_etc" />-->
 
 </menu>
