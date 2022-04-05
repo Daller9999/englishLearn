@@ -69,7 +69,6 @@ class LearnViewModel(
         sizeArray = arrayList.size
         this.min = min
         this.max = max
-        Log.i(LOG_TAG, arrayList.toString() + "\n" + sizeArray.toString())
     }
 
 }

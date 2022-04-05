@@ -36,6 +36,7 @@ class FragmentLearn : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
         with(binding) {
             buttonNext.setOnClickListener { viewModel.next() }
             buttonShowAll.setOnClickListener {
@@ -53,6 +54,7 @@ class FragmentLearn : Fragment() {
                 viewModel.start(min, max)
             }
         }
+
         viewModel.word.observe(viewLifecycleOwner) { state ->
             with(binding) {
                 editTextWord.text = state.word.word
