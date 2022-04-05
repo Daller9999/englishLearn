@@ -67,6 +67,10 @@ class FragmentLearn : Fragment() {
                 editTextMin.setText("0")
             }
         }
+        viewModel.currentSize.observe(viewLifecycleOwner) {
+            val text = "current size = $it"
+            binding.textViewCurrentSize.text = text
+        }
     }
 
 }

@@ -26,6 +26,9 @@ class LearnViewModel(
     private val _size = MutableLiveData<Int>()
     val size: LiveData<Int> = _size
 
+    private val _currentSize = MutableLiveData<Int>()
+    val currentSize: LiveData<Int> = _currentSize
+
     private val list = arrayListOf<Word>()
 
     private var sizeArray = 0
@@ -49,9 +52,10 @@ class LearnViewModel(
         }
         val i = Random.nextInt(sizeArray)
         val word = list[arrayList[i]]
-        val bool = Random.nextBoolean()
+        val bool = true//Random.nextBoolean()
 
         sizeArray--
+        _currentSize.postValue(sizeArray)
         arrayList.removeAt(i)
 
         _word.postValue(WordState(word, bool, !bool))

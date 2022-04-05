@@ -79,6 +79,17 @@
         tools:text="transalte" />
 
     <TextView
+        android:id="@+id/textViewCurrentSize"
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+
+        app:layout_constraintBottom_toTopOf="@id/textViewRange"
+        tools:text="current size = 10"/>
+
+    <TextView
         android:id="@+id/textViewRange"
         android:layout_width="wrap_content"
         android:layout_height="50dp"
@@ -126,18 +137,22 @@
 
     <Button
         android:id="@+id/buttonListen"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:text="@string/text_listen"
         android:layout_height="50dp"
 
-        app:layout_constraintBottom_toTopOf="@id/buttonShowAll"/>
+        app:layout_constraintRight_toLeftOf="@id/buttonShowAll"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/buttonNext"/>
 
     <Button
         android:id="@+id/buttonShowAll"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:text="@string/text_show"
         android:layout_height="50dp"
 
+        app:layout_constraintLeft_toRightOf="@id/buttonListen"
+        app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintBottom_toTopOf="@id/buttonNext"/>
 
     <Button
