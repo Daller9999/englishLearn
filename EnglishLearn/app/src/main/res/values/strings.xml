@@ -22,4 +22,8 @@
     <string name="text_print_to_console">Print to console all words</string>
     <string name="text_print_as_json">Print to console as json</string>
     <string name="text_close_db">Close DB</string>
+    <string name="text_range_min">Range min: </string>
+    <string name="text_max"> max: </string>
+    <string name="text_start">Start</string>
+
 </resources>

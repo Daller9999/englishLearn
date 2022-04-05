@@ -46,6 +46,12 @@ class FragmentLearn : Fragment() {
                 val word = viewModel.word.value?.word?.word ?: return@setOnClickListener
                 textToSpeechEngine.speak(word, TextToSpeech.QUEUE_FLUSH, null, "null")
             }
+            buttonStart.setOnClickListener {
+                val min = editTextMin.text.toString().toIntOrNull()
+                val max = editTextMax.text.toString().toIntOrNull()
+                if (min == null || max == null) return@setOnClickListener
+                viewModel.start(min, max)
+            }
         }
         viewModel.word.observe(viewLifecycleOwner) { state ->
             with(binding) {
@@ -53,6 +59,12 @@ class FragmentLearn : Fragment() {
                 editTextTranslate.text = state.word.translate
                 editTextTranslate.visibleOrInvisible(state.isShowTranslate)
                 editTextWord.visibleOrInvisible(state.isShowWord)
+            }
+        }
+        viewModel.size.observe(viewLifecycleOwner) {
+            with(binding) {
+                editTextMax.setText(it.toString())
+                editTextMin.setText("0")
             }
         }
     }
