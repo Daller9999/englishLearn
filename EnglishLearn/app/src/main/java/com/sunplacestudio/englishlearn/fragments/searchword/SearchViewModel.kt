@@ -34,11 +34,8 @@ class SearchViewModel(
     fun search(string: String) {
         job?.cancel()
         job = scopeIO.launch {
-            val resultList = arrayListOf<Word>()
-            list.forEach { word ->
-                if (word.word.contains(string) || word.translate.contains(string)) {
-                    resultList.add(word)
-                }
+            val resultList = list.filter { word ->
+                word.word.contains(string) || word.translate.contains(string)
             }
             _words.postValue(resultList)
         }

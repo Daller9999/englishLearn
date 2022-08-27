@@ -24,7 +24,7 @@ class EditWordViewModel(
     fun uploadWord(id: Long) {
         this.id = id
         scopeIO.launch {
-            wordRepository.getWordsList().find { it.id == id }?.let {
+            wordRepository.getWordsList().firstOrNull { it.id == id }?.let {
                 _word.postValue(it)
             }
         }
